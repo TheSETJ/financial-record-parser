@@ -3,6 +3,20 @@
     let parsedValue: string = '';
 
     function parse(record: string): string {
+        record = parseVerb(record);
+
+        return record;
+    }
+
+    function parseVerb(record: string): string {
+        const verbs = ['پرداخت', 'دریافت', 'جابه‌جایی'];
+
+        let hasVerb = verbs.some((verb) => record.startsWith(verb));
+
+        if (!hasVerb) {
+            record = verbs[0] + ' ' + record;
+        }
+
         return record;
     }
 
