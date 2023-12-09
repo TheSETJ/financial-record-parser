@@ -1,2 +1,19 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+    let inputValue: string = '';
+    let parsedValue: string = '';
+
+    function parse(record: string): string {
+        return record;
+    }
+
+    $: parsedValue = parse(inputValue);
+</script>
+
+<style>
+    @import '../../public/build/tailwind.css';
+</style>
+
+<div class="container">
+    <input type="text" bind:value={inputValue} />
+    <p>{parsedValue}</p>
+</div>

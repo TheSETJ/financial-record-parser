@@ -1,3 +1,30 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+html {
+    font-family: 'Vazir', sans-serif; /* Make sure to include the Vazir font in your project */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    direction: rtl;
+}
+
+.container {
+    width: 50%;
+}
+
+input, p {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
