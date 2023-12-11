@@ -1,6 +1,6 @@
 <script lang="ts">
     let inputValue: string = '';
-    let parsedValue: string = '';
+    let parsedValues: Array<string> = [];
 
     function parse(record: string): string {
         record = parseVerb(record);
@@ -95,7 +95,9 @@
         return numericValues.reduce((sum, value) => sum + value, 0);
     }
 
-    $: parsedValue = parse(inputValue);
+    function parseLines() {
+        parsedValues = inputValue.split('\n').map(record => parse(record));
+    }
 </script>
 
 <style>
@@ -103,6 +105,10 @@
 </style>
 
 <div class="container">
-    <input type="text" bind:value={inputValue} />
-    <p>{parsedValue}</p>
+    <textarea rows="5" bind:value={inputValue} on:input={parseLines}></textarea>
+    <div class="paragraphs">
+        {#each parsedValues as parsedValue, index (index)}
+            <p>{parsedValue}</p>
+        {/each}
+    </div>
 </div>
