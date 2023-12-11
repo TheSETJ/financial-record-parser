@@ -106,9 +106,9 @@
 
 <div class="container">
     <textarea rows="5" bind:value={inputValue} on:input={parseLines}></textarea>
-    <div class="paragraphs">
+    <output class="paragraphs">
         {#each parsedValues as parsedValue, index (index)}
             <p>{parsedValue}</p>
         {/each}
-    </div>
+    </output>
 </div>
