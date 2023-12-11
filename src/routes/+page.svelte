@@ -23,7 +23,7 @@
     }
 
     function replaceAmount(record: string): string {
-        const amountRegex = /[۰-۹].*(:?هزار|میلیون|میلیارد|تومان|ریال|\sو\s|[۰-۹]{1,3})\s?/g;
+        const amountRegex = /[۰-۹](هزار|میلیون|میلیارد|ریال|تومان|[۰-۹]|\s|و)*(:?هزار|میلیون|میلیارد|ریال|تومان|[۰-۹]|\s|و)/g;
 
         return record.replace(amountRegex, (match, ...groups) => {
             const numericValue = parseAmount(match);
