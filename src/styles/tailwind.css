@@ -3,44 +3,45 @@
 @import 'tailwindcss/utilities';
 
 html {
-    font-family: 'Vazir', sans-serif; /* Make sure to include the Vazir font in your project */
+  font-family: 'Vazir', sans-serif; /* Make sure to include the Vazir font in your project */
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    direction: rtl;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  direction: rtl;
 }
 
 .container {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-textarea, .paragraphs {
-    width: 100%;
-    box-sizing: border-box;
-    min-height: 200px;
-    padding: 1rem;
-    margin: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1.25rem;
+textarea,
+.paragraphs {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 200px;
+  padding: 1rem;
+  margin: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.25rem;
 }
 
 output {
-    width: 100%;
-    overflow-y: auto;
-    min-height: 200px;
-    max-height: 200px;
-    padding: 1rem;
-    margin: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1.25rem;
+  width: 100%;
+  overflow-y: auto;
+  min-height: 200px;
+  max-height: 200px;
+  padding: 1rem;
+  margin: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.25rem;
 }
